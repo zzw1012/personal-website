@@ -1,0 +1,53 @@
+/* === CSS Variables === */
+:root {
+  --color-bg: #0a0a0f;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f8f9fa;
+  --color-text: #1a1a2e;
+  --color-text-secondary: #555;
+  --color-text-light: #aab;
+  --color-accent: #00d4ff;
+  --color-accent-alt: #0ea5e9;
+  --color-accent-glow: rgba(0, 212, 255, 0.15);
+  --color-card-shadow: rgba(0, 0, 0, 0.08);
+  --color-nav-bg: rgba(10, 10, 15, 0.75);
+  --font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  --max-width: 960px;
+  --nav-height: 64px;
+  --section-gap: 80px;
+  --card-padding: 48px;
+  --border-radius: 12px;
+}
+
+/* === Reset === */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
