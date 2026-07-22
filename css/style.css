@@ -175,3 +175,72 @@ img {
   0%, 100% { top: 6px; opacity: 1; }
   50% { top: 18px; opacity: 0.3; }
 }
+
+/* === Section Title === */
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--color-accent-alt);
+  display: inline-block;
+}
+
+/* === About === */
+.about-text p {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+.about-text strong {
+  color: var(--color-accent-alt);
+  font-weight: 600;
+}
+
+/* === Skill Groups === */
+.skill-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.skill-group-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 6px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-accent-alt);
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  border-radius: 20px;
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+.skill-tag:hover {
+  background: var(--color-accent-alt);
+  color: #fff;
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.3);
+}
