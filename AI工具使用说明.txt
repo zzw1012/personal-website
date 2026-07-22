@@ -2,7 +2,7 @@ AI工具使用说明
 ==============
 
 1. 使用了哪些AI工具
-Claude Code（Anthropic 官方 CLI 编程工具），通过子智能体驱动开发模式（Subagent-Driven Development）完成全部开发工作。
+Claude Code，通过子智能体驱动开发模式（Subagent-Driven Development）完成全部开发工作。
 
 2. AI帮助完成了哪些工作
 - 需求分析与方案设计：将测试题要求拆解为可执行的设计方案，输出完整的设计规格文档（技术选型对比、视觉设计方案、页面结构规划）
@@ -12,7 +12,7 @@ Claude Code（Anthropic 官方 CLI 编程工具），通过子智能体驱动开
 - 部署指导：Git 初始化、GitHub Pages 配置与推送部署
 
 3. 自己手动修改了哪些内容
-- 技术方案的最终决策：选择方案 A（纯 HTML/CSS/JS）、确认现代科技风外壳 + 简洁内容卡片的视觉方向、选择 GitHub Pages 部署
+- 技术方案的最终决策：选择方案（纯 HTML/CSS/JS）、确认现代科技风外壳 + 简洁内容卡片的视觉方向、选择 GitHub Pages 部署
 - 设计方向的把控：深色背景 + 粒子动画 + 青蓝色强调色的科技感配色方案
 - 技能标签分组结构的设计：将技能按语言/AI/后端/前端/工程五组分类
 - GitHub 仓库创建：手动在 GitHub.com 创建仓库并启用 Pages
@@ -24,9 +24,8 @@ Claude Code（Anthropic 官方 CLI 编程工具），通过子智能体驱动开
 - pdftotext 使用 -layout 参数导致中文字符丢失 → AI 建议去掉 -layout 参数，使用默认布局模式，中文提取正常
 - GitHub CLI（gh）未安装在本地环境 → AI 提供了浏览器手动创建仓库的替代方案
 - GitHub Pages API 调用需要认证 Token → AI 提供了浏览器手动配置 Pages 的步骤
+- GitHub Pages CDN 缓存导致修改代码后页面不更新，强制刷新（Ctrl+Shift+R）也无效 → AI 建议在 CSS/JS 引用后添加版本号（如 ?v=5）强制浏览器加载新文件，并用无痕窗口排除本地缓存干扰
+- Hero 区域头像只显示一部分：① 导航栏（fixed 定位 64px）遮挡了头像顶部——AI 诊断后将 padding-top 从 30px 改为 80px，让内容避开导航栏；② .hero 的 overflow: hidden 裁切了溢出内容——AI 去掉该属性；③ justify-content: center 在矮容器中居中导致顶部被挤出——AI 改为 flex-start 从顶部排列
 
 5. 最终网站链接
 https://zzw1012.github.io/personal-website/
-
- GitHub Pages CDN 缓存
-现在头像不能完全显示
