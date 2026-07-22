@@ -32,7 +32,7 @@ html {
 
 body {
   font-family: var(--font-family);
-  background: var(--color-bg);
+  background: #f0f2f5;
   color: var(--color-text);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -54,7 +54,7 @@ img {
 
 /* === Particle Canvas === */
 #particle-canvas {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -95,6 +95,9 @@ img {
   min-height: 75vh;
   text-align: center;
   padding: 120px 24px 80px;
+  background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-content {

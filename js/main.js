@@ -7,8 +7,9 @@ function initParticleCanvas() {
   const particles = [];
 
   function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const hero = document.getElementById('hero');
+    canvas.width = hero.offsetWidth;
+    canvas.height = hero.offsetHeight;
   }
   resize();
   window.addEventListener('resize', resize);
