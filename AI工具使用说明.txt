@@ -27,3 +27,6 @@ Claude Code（Anthropic 官方 CLI 编程工具），通过子智能体驱动开
 
 5. 最终网站链接
 https://zzw1012.github.io/personal-website/
+
+ GitHub Pages CDN 缓存
+现在头像不能完全显示
