@@ -105,7 +105,58 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects"></section>
+  <section id="projects" class="section-light">
+    <div class="card">
+      <h2 class="section-title">项目经历</h2>
+
+      <!-- Project 1: loom -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3 class="project-name">loom — 本地 AI 编程助手智能体 Harness</h3>
+          <span class="project-date">2026.4 – 2026.6</span>
+        </div>
+        <p class="project-desc">
+          实现了一款本地优先（local-first）的终端 AI 编程助手。与典型云端工具不同，loom 将所有代码上下文、对话历史、执行 trace 和 run report 全部保存在仓库本地的目录中，仅向模型 API 发送 prompt 文本，用户对数据和会话拥有完全控制权。支持 DeepSeek / OpenAI / Anthropic / Ollama 四种模型后端一键切换，并实现了分层记忆系统与 Benchmark 确定性评估框架。
+        </p>
+        <div class="project-tech">
+          <span class="project-tech-label">技术栈：</span>
+          Python · Agent Harness · Tool Calling · Context Management · Checkpoint / Resume · Layered Memory · Run Trace
+        </div>
+        <div class="project-duty">
+          <span class="project-duty-label">个人职责：</span>
+          <ul>
+            <li>从零搭建运行时引擎，统一模型调度、工具编排、会话持久化与运行审计四条链路</li>
+            <li>设计"预算裁剪 + 记忆分层"联合上下文治理方案，实现 LRU 文件追踪、文件摘要缓存、过程笔记三层记忆</li>
+            <li>部署工具安全边界：路径沙箱、7 类工具校验、三级审批策略、重复调用检测与敏感信息脱敏</li>
+            <li>建立不依赖真实模型的 Benchmark 框架，覆盖 pass_rate / attempts / tool_steps / failure_category / trace 五项指标</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Project 2: 电商问数Agent -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3 class="project-name">电商问数智能数据分析 Agent</h3>
+          <span class="project-date">2026.4 – 2026.6</span>
+        </div>
+        <p class="project-desc">
+          解决了业务人员不会写 SQL、数据分析师难以记住所有表结构/字段含义/指标口径的痛点。通过自然语言提问，系统自动完成关键词抽取、元数据多路召回、上下文构建、SQL 生成校验与执行的全链路智能问数。基于 LangGraph 编排多阶段推理工作流，支持三种检索方式的协同配合，并以 SSE 流式返回执行进度和查询结果。
+        </p>
+        <div class="project-tech">
+          <span class="project-tech-label">技术栈：</span>
+          Python · LangGraph · LangChain · FastAPI · MySQL · Qdrant · Elasticsearch · TEI Embedding · React · Vite
+        </div>
+        <div class="project-duty">
+          <span class="project-duty-label">个人职责：</span>
+          <ul>
+            <li>基于 LangGraph 搭建 12 节点多阶段智能体工作流（关键词抽取 → 三路并行召回 → SQL 生成 → EXPLAIN 校验 → 执行）</li>
+            <li>构建元数据知识库：MySQL 管理元数据 + Qdrant 语义召回 + Elasticsearch 全文检索，打通 Jieba 分词 → Embedding → 混合检索标准管线</li>
+            <li>后端 FastAPI + Pydantic + SSE 流式输出，前端 React + Vite + Tailwind CSS 聊天式界面，前后端联调完成</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Contact -->
   <section id="contact"></section>

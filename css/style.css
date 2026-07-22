@@ -244,3 +244,79 @@ img {
   transform: scale(1.08);
   box-shadow: 0 4px 16px rgba(14, 165, 233, 0.3);
 }
+
+/* === Project Cards === */
+.project-card {
+  padding: 32px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.project-card:first-of-type {
+  padding-top: 0;
+}
+
+.project-card:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.project-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.project-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.project-date {
+  font-size: 13px;
+  color: var(--color-text-light);
+  white-space: nowrap;
+  margin-left: 20px;
+}
+
+.project-desc {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  margin-bottom: 14px;
+}
+
+.project-tech {
+  font-size: 13px;
+  color: var(--color-accent-alt);
+  margin-bottom: 14px;
+}
+
+.project-tech-label {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.project-duty {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.project-duty-label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.project-duty ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.project-duty li {
+  margin-bottom: 6px;
+}
+
+.project-duty li:last-child {
+  margin-bottom: 0;
+}
