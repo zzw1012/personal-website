@@ -97,7 +97,6 @@ img {
   padding: 30px 24px 30px;
   background: var(--color-bg);
   position: relative;
-  overflow: hidden;
 }
 
 .hero-content {
@@ -122,7 +121,7 @@ img {
 }
 
 .hero-name {
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 700;
   color: #fff;
   letter-spacing: 4px;
