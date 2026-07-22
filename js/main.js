@@ -71,6 +71,48 @@ function initParticleCanvas() {
   animate();
 }
 
+function initNavbarScroll() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          for (const link of navLinks) {
+            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+          }
+        }
+      }
+    },
+    { rootMargin: '-30% 0px -70% 0px', threshold: 0 }
+  );
+
+  for (const section of sections) {
+    observer.observe(section);
+  }
+}
+
+function initScrollReveal() {
+  const cards = document.querySelectorAll('.card');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      }
+    },
+    { threshold: 0.15 }
+  );
+
+  for (const card of cards) {
+    observer.observe(card);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initParticleCanvas();
   initNavbarScroll();
